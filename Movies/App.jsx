@@ -7,6 +7,8 @@ import MovieDetailScreen from './MovieDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
+
+
 function App() {
   return (
     <NavigationContainer>

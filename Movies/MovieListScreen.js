@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import {
   SafeAreaView,
   StatusBar,
@@ -8,10 +8,11 @@ import {
   Text,
   View,
   ScrollView,
-  Image
+  Image,
+  TouchableHighlight
 } from 'react-native';
 
-function MoviesList() {
+function MoviesList(props) {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -23,6 +24,13 @@ function MoviesList() {
       })
   }, []);
 
+  const itemPressed = (index) => {
+    //alert(index);
+    props.navigation.navigate(
+      'MovieDetails',
+      { movie: movies[index] });
+  }
+
   if (movies.length === 0) {
     return (
       <View style={{ flex: 1, padding: 20 }}>
@@ -31,11 +39,18 @@ function MoviesList() {
     );
   }
 
+  let movieItems = movies.map(function (movie, index) {
+    return (
+      <TouchableHighlight onPress={_ => itemPressed(index)} 
+                  underlayColor="lightgray" key={index}>
+      <MovieListItem movie={movie} key={index}/>
+    </TouchableHighlight>
+    );
+  });
+
   return (
     <ScrollView>
-      {movies.map((movie, index) => (
-        <MovieListItem movie={movie} key={index} />
-      ))}
+     {movieItems}
     </ScrollView>
   );
 }
@@ -64,12 +79,13 @@ const MovieListScreen = ({ navigation }) => {
       <SafeAreaView>
         <StatusBar/>
         <View style={styles.sectionContainer}>
-          <Text>Hello React Native CLI</Text>
+        <MoviesList navigation={ navigation }/>
         </View>
         <MoviesList/>
       </SafeAreaView>
     );
   };
+
 
 const styles = StyleSheet.create({
   movieItem: {
