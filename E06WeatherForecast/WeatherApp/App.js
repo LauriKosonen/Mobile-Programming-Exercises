@@ -7,6 +7,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Dialog from 'react-native-dialog';
 import { Text } from 'react-native';
 import WeatherForecast from './WeatherForecast';
+import useAxios from 'axios-hooks';
+import { useEffect } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const App: () => Node = () => {
@@ -28,6 +31,37 @@ const App: () => Node = () => {
     setModalVisible(false);
   }
 
+  const deleteCity = (id) => {
+    let filteredArray = cities.filter(city => city.id !== id);
+    setCities(filteredArray);
+  }
+
+  const storeData = async () => {
+    try {
+      await AsyncStorage.setItem('@cities', JSON.stringify(cities));
+    } catch (e) {
+      console.log("Cities saving error!");
+    }
+  }
+
+  const getData = async () => {
+    try {
+      const value = await AsyncStorage.getItem('@cities');
+      if (value !== null) {
+        setCities(JSON.parse(value));
+      }
+    } catch (e) {
+      console.log("Cities loading error!");
+    }
+  }
+
+  useEffect(() => {
+    getData(); 
+  }, []);
+
+  useEffect(() => {
+    storeData(); 
+  }, [cities]);
   
 
   return (
@@ -50,7 +84,7 @@ const App: () => Node = () => {
       
       <ScrollView>
         {cities.map(city => (
-          <WeatherForecast key={city.id} city={city} />
+          <WeatherForecast key={city.id} city={city} deleteCity={deleteCity}/>
         ))}
       </ScrollView>
     </SafeAreaView>
