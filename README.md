@@ -31,3 +31,5 @@ Luulen että opin kurssilta kaiken olennaisen kuten React native/CLI, Expo ja PW
 Oma ajankäyttöni tällä kurssilla:
 * Luennot: 2-3h/viikko
 * Kotitehtävät: 1-6h/tehtävä. (7 tehävää + palaute)
+
+Saatan kuitenkin vielä jatkaa tehtävien tekemistä Joulukuussa jos jää aikaa.
