@@ -12,10 +12,10 @@ Kurssin kotisivut ovat selkeät ja helposti navigoitavissa.
 Materiaali sopii hyvin etäopiskeluun. Itse opiskelin osan aiheista etänä, ja sain silti hyvän käsityksen siitä mitä pitää oppia ja tehdä.
 
 ## How about workload (low, ok, too much)?
-Hankala arvioida koska tein minimi määrän tehtäviä. Vaikuttaa kuitenkin selkeästi kevyemmältä kurssilta kuin esimerkiksi android development- kurssi.
+Hankala arvioida koska tein minimi määrän tehtäviä. Vaikuttaa kuitenkin selkeästi kevyemmältä kurssilta kuin esimerkiksi android development- kurssi. Sanoisin siis että työmäärä on sopiva.
 
 ## How about evaluation (exercises and research assignment)?
-Tehtävät ovat olleet monipuolisia. Ehkä joitain tehtäviä olisi voinut yhdistää. esimerkiksi Movies 1 ja 2, sekä Todo ja Todo with database. En tehnyt harjoitustyötä, joten en osaa sitä arvioida.
+Tehtävät ovat olleet monipuolisia, mutta joihinkin tehtäviin ei ollut ollenkaan ohjeita. Niihin tehtäviin olisin toivonut Joitain suuntaa antavia ohjeita joilla olisi päässyt paremmin alkuun. Ehkä joitain tehtäviä olisi voinut myös yhdistää. Esimerkiksi Movies 1 ja 2, sekä Todo ja Todo with database. En tehnyt harjoitustyötä, joten en osaa sitä arvioida.
 
 ## Give a rating number from 1-5 (5 == excellent) to this course at overal
 4
