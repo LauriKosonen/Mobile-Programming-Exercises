@@ -1,4 +1,4 @@
-# mobile-exercises
+# mobile-exercises (School course)
 
 # feedback
 
